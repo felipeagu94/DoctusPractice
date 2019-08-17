@@ -1,0 +1,14 @@
+G:\Net\DoctusPractice\Back\Infraestructura\Infraestructura\bin\Debug\netcoreapp2.2\Infraestructura.deps.json
+G:\Net\DoctusPractice\Back\Infraestructura\Infraestructura\bin\Debug\netcoreapp2.2\Infraestructura.dll
+G:\Net\DoctusPractice\Back\Infraestructura\Infraestructura\obj\Debug\netcoreapp2.2\Infraestructura.csprojAssemblyReference.cache
+G:\Net\DoctusPractice\Back\Infraestructura\Infraestructura\obj\Debug\netcoreapp2.2\Infraestructura.csproj.CoreCompileInputs.cache
+G:\Net\DoctusPractice\Back\Infraestructura\Infraestructura\obj\Debug\netcoreapp2.2\Infraestructura.AssemblyInfoInputs.cache
+G:\Net\DoctusPractice\Back\Infraestructura\Infraestructura\obj\Debug\netcoreapp2.2\Infraestructura.AssemblyInfo.cs
+G:\Net\DoctusPractice\Back\Infraestructura\Infraestructura\bin\Debug\netcoreapp2.2\Infraestructura.pdb
+G:\Net\DoctusPractice\Back\Infraestructura\Infraestructura\obj\Debug\netcoreapp2.2\Infraestructura.dll
+G:\Net\DoctusPractice\Back\Infraestructura\Infraestructura\obj\Debug\netcoreapp2.2\Infraestructura.pdb
+G:\Net\DoctusPractice\Back\Infraestructura\Infraestructura\bin\Debug\netcoreapp2.2\Infraestructura.runtimeconfig.json
+G:\Net\DoctusPractice\Back\Infraestructura\Infraestructura\bin\Debug\netcoreapp2.2\Infraestructura.runtimeconfig.dev.json
+G:\Net\DoctusPractice\Back\Infraestructura\Infraestructura\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
+G:\Net\DoctusPractice\Back\Infraestructura\Infraestructura\bin\Debug\netcoreapp2.2\Newtonsoft.Json.xml
+G:\Net\DoctusPractice\Back\Infraestructura\Infraestructura\obj\Debug\netcoreapp2.2\Infraestructura.csproj.CopyComplete

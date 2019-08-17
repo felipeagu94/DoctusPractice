@@ -1,0 +1,14 @@
+G:\Net\DoctusPractice\Back\Infraestructura\AccesoDatos\bin\Debug\netcoreapp2.2\AccesoDatos.deps.json
+G:\Net\DoctusPractice\Back\Infraestructura\AccesoDatos\bin\Debug\netcoreapp2.2\AccesoDatos.dll
+G:\Net\DoctusPractice\Back\Infraestructura\AccesoDatos\bin\Debug\netcoreapp2.2\AccesoDatos.pdb
+G:\Net\DoctusPractice\Back\Infraestructura\AccesoDatos\bin\Debug\netcoreapp2.2\Infraestructura.dll
+G:\Net\DoctusPractice\Back\Infraestructura\AccesoDatos\bin\Debug\netcoreapp2.2\Infraestructura.pdb
+G:\Net\DoctusPractice\Back\Infraestructura\AccesoDatos\obj\Debug\netcoreapp2.2\AccesoDatos.csprojAssemblyReference.cache
+G:\Net\DoctusPractice\Back\Infraestructura\AccesoDatos\obj\Debug\netcoreapp2.2\AccesoDatos.csproj.CoreCompileInputs.cache
+G:\Net\DoctusPractice\Back\Infraestructura\AccesoDatos\obj\Debug\netcoreapp2.2\AccesoDatos.AssemblyInfoInputs.cache
+G:\Net\DoctusPractice\Back\Infraestructura\AccesoDatos\obj\Debug\netcoreapp2.2\AccesoDatos.AssemblyInfo.cs
+G:\Net\DoctusPractice\Back\Infraestructura\AccesoDatos\obj\Debug\netcoreapp2.2\AccesoDatos.csproj.CopyComplete
+G:\Net\DoctusPractice\Back\Infraestructura\AccesoDatos\obj\Debug\netcoreapp2.2\AccesoDatos.dll
+G:\Net\DoctusPractice\Back\Infraestructura\AccesoDatos\obj\Debug\netcoreapp2.2\AccesoDatos.pdb
+G:\Net\DoctusPractice\Back\Infraestructura\AccesoDatos\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
+G:\Net\DoctusPractice\Back\Infraestructura\AccesoDatos\bin\Debug\netcoreapp2.2\Newtonsoft.Json.xml
