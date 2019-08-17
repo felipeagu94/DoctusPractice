@@ -38,6 +38,7 @@ namespace ServicioAPI
             services.AddTransient<IActividadAccesoDatos, ActividadAccesoDatos>();
             services.AddTransient<IUsuarioAccesoDatos, UsuarioAccesoDatos>();
             services.AddTransient<FachadaUsuario>();
+            services.AddTransient<FachadaActividad>();
             services.AddTransient<Contexto>();
             services.AddDbContext<Contexto>(opts => opts.UseSqlServer(Configuration["ConnectionString:Conexion"]));
         }
