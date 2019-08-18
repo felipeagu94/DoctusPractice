@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Infraestructura.Modelos;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ServicioAPI.Facade;
@@ -10,6 +11,7 @@ using ServicioAPI.Facade;
 namespace ServicioAPI.Controllers
 {
     [Route("api/[controller]")]
+    [EnableCors("AllowAll")]
     [ApiController]
     public class UsuarioController : ControllerBase
     {
