@@ -4,13 +4,14 @@ import '../estilos/login.css'
 
 class Login extends Component {
   handleSubmit = e => {
-    e.preventDefault();
+    e.preventDefault()
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+          const datosuser = {NombreUsuario : values.usuario, Password : values.password}
+          this.props.actionLogin(datosuser)
       }
-    });
-  };
+    })
+  }
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
@@ -46,4 +47,4 @@ class Login extends Component {
     );
   }
 }
-export const WrappedNormalLoginForm = Form.create({ name: 'normal_login' })(Login);
+export const WrappedNormalLoginForm = Form.create({ name: 'normal_login' })(Login)
