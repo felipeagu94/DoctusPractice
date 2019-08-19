@@ -8,7 +8,8 @@ export default class Actividades extends Component {
         super(props)
         this.state = {
             usuario: this.props.usuario,
-            actividades: []
+            actividades: [],
+            panel: true
         }
     }
     componentDidMount() {
@@ -43,11 +44,11 @@ export default class Actividades extends Component {
             })
     }
     render() {
-        const { actividades, usuario } = this.state
+        const { actividades, usuario, panel } = this.state
         return (
             <div>
                 <FormularioActividadesForm actionfrom={this.guardarActividad} usuario={usuario} />
-                <TablaActividades actividades={actividades}/>
+                {panel && <TablaActividades actividades={actividades}/>}
             </div>
         )
     }

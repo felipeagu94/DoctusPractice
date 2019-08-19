@@ -20,5 +20,17 @@ namespace AccesoDatos.Interfaces
         /// <param name="idUsuario">Usuario solicitante</param>
         /// <returns></returns>
         Task<List<Actividad>> RetornarActividades(int idUsuario);
+        /// <summary>
+        /// Se agregan tiempos a una actividad
+        /// </summary>
+        /// <param name="actividad">actividad a actualizar</param>
+        /// <returns></returns>
+        Task<bool> ActualizarTiempos(Actividad actividad);
+        /// <summary>
+        /// Retorna los tiempos de una actividad
+        /// </summary>
+        /// <param name="idActividad">actividad consultada</param>
+        /// <returns></returns>
+        Task<List<DetalleActividad>> RetornarDetallesActividad(int idActividad);
     }
 }
