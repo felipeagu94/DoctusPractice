@@ -14,6 +14,7 @@ namespace Infraestructura.Modelos
         public DateTime fecha { get; set; }
         public int tiempo { get; set; }
         public int IdActividad { get; set; }
+        [JsonIgnore]
         public virtual Actividad Actividad { get; set; }
     }
 }

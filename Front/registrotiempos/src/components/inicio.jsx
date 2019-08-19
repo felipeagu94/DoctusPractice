@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import { WrappedNormalLoginForm } from './login'
-import { API_URL } from '../config';
-import axios from 'axios';
+import Actividades from './actividades'
+import { API_URL } from '../config'
+import 'antd/dist/antd.css';
+import axios from 'axios'
 
 export default class Inicio extends Component {
     state = {
-        usuario: ''
+        usuario: '',
+        idUsuario: ''
     }
     validarLogin = async (user) => {
-        console.log(user)
         await axios({
             method: 'post',
             url: `${API_URL}/Usuario/login`,
@@ -17,15 +19,26 @@ export default class Inicio extends Component {
         })
         .then(res => {
             const usuario = res.data.data.message === 1 ? user.NombreUsuario : ''
-            this.setState({ usuario })
-            console.log(this.state.usuario)
+            this.ObtenerIdUsuario(usuario).then( aw =>  this.setState({ usuario }))
+        })
+    }
+    ObtenerIdUsuario = async (user) =>{
+        await axios({
+            method: 'get',
+            url: `${API_URL}/Usuario/Obtener?usuario=${user}`,
+            data: [],
+            headers: { 'Content-Type': 'application/json; charset=utf-8' }
+        })
+        .then(res => {
+            const idUsuario = res.data.data
+            this.setState({ idUsuario })
         })
     }
     render() {
-        const { usuario } = this.state
+        const { usuario, idUsuario } = this.state
         return (
             <div className="container">
-                {!usuario ? <WrappedNormalLoginForm actionLogin={this.validarLogin}/> : <h1>User on!</h1>}
+                {!usuario ? <WrappedNormalLoginForm actionLogin={this.validarLogin}/> : <Actividades usuario={idUsuario}/>}
             </div>
         )
     }

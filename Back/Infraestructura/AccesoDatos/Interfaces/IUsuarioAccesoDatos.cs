@@ -21,5 +21,11 @@ namespace AccesoDatos.Interfaces
         /// <param name="password">Contraseña del usuario</param>
         /// <returns></returns>
         Task<bool> ValidarUsuario(string usuario, string password);
+        /// <summary>
+        /// Retorna el id del usuario
+        /// </summary>
+        /// <param name="usuario">Nombre del usuario</param>
+        /// <returns></returns>
+        Task<int> ObtenerIdUsuario(string usuario);
     }
 }

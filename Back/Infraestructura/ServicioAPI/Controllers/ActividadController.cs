@@ -38,6 +38,6 @@ namespace ServicioAPI.Controllers
         }
         [HttpGet]
         [Route("Obtener")]
-        public async Task<JsonResult> List([FromQuery] int idusuario) => new JsonResult(await _fachadaActividad.RetornarActividades(idusuario));
+        public async Task<JsonResult> List([FromQuery] int usuario) => new JsonResult(await _fachadaActividad.RetornarActividades(usuario));
     }
 }

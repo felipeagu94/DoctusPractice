@@ -18,6 +18,6 @@ namespace ServicioAPI.Facade
         {
             return await _actividadAcceso.CrearActividad(actividad);
         }
-        public async Task<List<Actividad>> RetornarActividades(int idUsuario) => await _actividadAcceso.RetornarActividades(idUsuario);
+        public async Task<List<Actividad>> RetornarActividades(int usuario) => await _actividadAcceso.RetornarActividades(usuario);
     }
 }

@@ -31,9 +31,9 @@ namespace AccesoDatos.AccesoDatos
         /// </summary>
         /// <param name="idUsuario">Usuario solicitante</param>
         /// <returns></returns>
-        public async Task<List<Actividad>> RetornarActividades(int idUsuario)
+        public async Task<List<Actividad>> RetornarActividades(int usuario)
         {
-            return _contexto.Actividades.Where(a => a.IdUsuario == idUsuario).ToList();
+            return _contexto.Actividades.Where(a => a.IdUsuario == usuario).ToList();
         }
     }
 }

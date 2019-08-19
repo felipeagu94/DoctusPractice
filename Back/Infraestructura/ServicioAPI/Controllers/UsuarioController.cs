@@ -42,5 +42,8 @@ namespace ServicioAPI.Controllers
             }
             return BadRequest(new { message = "Falta información para realizar la validación." });
         }
+        [HttpGet]
+        [Route("Obtener")]
+        public async Task<JsonResult> List([FromQuery] String usuario) => new JsonResult(await _FachadaUsuario.ObtenerIdUsuario(usuario));
     }
 }

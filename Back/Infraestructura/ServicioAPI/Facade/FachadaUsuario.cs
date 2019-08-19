@@ -33,5 +33,6 @@ namespace ServicioAPI.Facade
         {
             return await _usuarioAcceso.ValidarUsuario(usuario, password);
         }
+        public async Task<int> ObtenerIdUsuario(string usuario) => await _usuarioAcceso.ObtenerIdUsuario(usuario);
     }
 }

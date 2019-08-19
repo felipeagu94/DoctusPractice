@@ -38,5 +38,14 @@ namespace AccesoDatos.AccesoDatos
         {
             return _contexto.Usuarios.FirstOrDefault(u => u.NombreUsuario == usuario && u.Password == password) != null;
         }
+        /// <summary>
+        /// Retorna el id del usuario
+        /// </summary>
+        /// <param name="usuario">Nombre del usuario</param>
+        /// <returns></returns>
+        public async Task<int> ObtenerIdUsuario(string usuario)
+        {
+            return _contexto.Usuarios.FirstOrDefault(u => u.NombreUsuario == usuario).idUsuario;
+        }
     }
 }
