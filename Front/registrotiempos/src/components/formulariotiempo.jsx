@@ -21,7 +21,7 @@ class FormularioTiempos extends Component {
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
-            <Form onSubmit={this.handleSubmit} className="login-form">
+            <Form onSubmit={this.handleSubmit} className="tiempos-form">
                 <Form.Item>
                     {getFieldDecorator('fecha', {
                         rules: [{ required: true, message: 'Debe ingresar la fecha para la actividad' }],

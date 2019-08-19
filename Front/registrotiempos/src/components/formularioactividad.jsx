@@ -21,7 +21,7 @@ class FormularioActividades extends Component {
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
-            <Form onSubmit={this.handleSubmit} className="login-form">
+            <Form onSubmit={this.handleSubmit} className="actividades-form">
                 <Form.Item>
                     {getFieldDecorator('descripcion', {
                         rules: [{ required: true, message: 'Debe ingresar la descripción para la actividad' }],

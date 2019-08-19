@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Form, Icon, Input, Button } from 'antd';
 import '../estilos/login.css'
 
-class Login extends Component {
+class Registro extends Component {
   handleSubmit = e => {
     e.preventDefault()
     this.props.form.validateFields((err, values) => {
@@ -16,7 +16,7 @@ class Login extends Component {
     const { getFieldDecorator } = this.props.form;
     return (
       <Form onSubmit={this.handleSubmit} className="login-form">
-        <h1>Iniciar Sesión</h1>
+        <h1>Registro</h1>
         <Form.Item>
           {getFieldDecorator('usuario', {
             rules: [{ required: true, message: 'Debe ingresar un usuario' }],
@@ -40,14 +40,11 @@ class Login extends Component {
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit" className="login-form-button">
-            Aceptar
-          </Button>
-          <Button onClick={this.props.signUp} type="default" className="login-form-button">
-            Registrarse
+            Registrar
           </Button>
         </Form.Item>
       </Form>
     );
   }
 }
-export const WrappedNormalLoginForm = Form.create({ name: 'normal_login' })(Login)
+export const RegistroForm = Form.create({ name: 'normal_login' })(Registro)
