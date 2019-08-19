@@ -6,6 +6,7 @@ En la raíz del proyecto hay dos carpetas.
 -	Back: Esta el código C# para backend.
 -	Front: Esta el código React para el front.
 -	DoctusPractice.bak es el archivo de backup
+
 Configuración API
 Dentro de la carpeta Back se encuentra el directorio “Infraestructura”, allí está la solución que debemos ejecutar.
 1.	En el proyecto “ServicioAPI” en el archivo “appsettings.json” se debe configurar la cadena conexión donde se encuentra la base de datos.
