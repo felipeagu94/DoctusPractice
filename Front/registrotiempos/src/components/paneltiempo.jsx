@@ -9,7 +9,8 @@ export default class Tiempos extends Component {
         super(props)
         this.state = {
             actividad: this.props.actividad,
-            tiempos: []
+            tiempos: [],
+            regresar: this.props.regresar
         }
     }
     componentDidMount() {
@@ -38,19 +39,17 @@ export default class Tiempos extends Component {
         })
             .then(res => {
                 if (res.data.code === 200) {
-                    const tiempos = [...this.state.tiempos, { key: Math.random(), acciones: 'aca va la url', actividad: datosActividad.DescripcionActividad }]
-                    this.setState({ tiempos })
+                    this.llenarTiempos()
                 }
-                console.log(res)
             })
     }
     render() {
-        const { tiempos, actividad } = this.state
+        const { tiempos, actividad, regresar } = this.state
         return (
             <div>
                 <FormularioTiemposForm actionfrom={this.actualizarActividad} actividad={actividad} />
                 <TablaTiempos tiempos={tiempos} />
-                <Button type="primary"><Icon type="left" />Regresar</Button>
+                <Button type="primary" onClick={regresar}><Icon type="left" />Regresar</Button>
             </div>
         )
     }

@@ -1,15 +1,20 @@
 import React from 'react'
-import { Table } from 'antd';
+import { Table, Button } from 'antd';
 const columns = [
     {
         title: 'Acciones',
         dataIndex: 'acciones',
         key: 'acciones',
+        render: (text, record) => (
+            <span>
+              <Button type="link" onClick={record.onclic} value={record.acciones}>Agregar Horas</Button>
+            </span>
+          )
     },
     {
         title: 'Actividad',
         dataIndex: 'actividad',
-        key: 'actividad',
+        key: 'actividad'
     }
 ];
 const TablaActividades = ({ actividades }) => {

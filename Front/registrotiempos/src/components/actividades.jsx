@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import TablaActividades from './tablaactividades'
-import {FormularioActividadesForm} from './formularioactividad'
+import { FormularioActividadesForm } from './formularioactividad'
 import Tiempos from './paneltiempo'
 import { API_URL } from '../config'
 import axios from 'axios'
@@ -10,7 +10,8 @@ export default class Actividades extends Component {
         this.state = {
             usuario: this.props.usuario,
             actividades: [],
-            panel: true
+            panel: true,
+            actividadActiva: 0
         }
     }
     componentDidMount() {
@@ -25,7 +26,7 @@ export default class Actividades extends Component {
         })
             .then(res => {
                 let datos = res.data.data
-                const actividades = datos.map(u => { return { key : u.idActividad , acciones: 'aca va la url', actividad: u.descripcionActividad } })
+                const actividades = datos.map(u => { return { key: u.idActividad, acciones: u.idActividad, actividad: u.descripcionActividad, onclic: this.activarPanel } })
                 this.setState({ actividades })
             })
     }
@@ -37,20 +38,24 @@ export default class Actividades extends Component {
             headers: { 'Content-Type': 'application/json; charset=utf-8' }
         })
             .then(res => {
-                if(res.data.code === 200){
-                    const actividades = [...this.state.actividades, {key : Math.random(), acciones: 'aca va la url', actividad: datosActividad.DescripcionActividad}]
-                    this.setState({ actividades })
+                if (res.data.code === 200) {
+                    this.llenarActividades()
                 }
-                console.log(res)
             })
     }
+    activarPanel = (event) => {
+        const panel = false
+        const actividadActiva = event.currentTarget.value
+        this.setState({ panel, actividadActiva })
+    }
+    desactivarPanel = () => this.setState({ panel: true })
     render() {
-        const { actividades, usuario, panel } = this.state
+        const { actividades, usuario, panel, actividadActiva } = this.state
         return (
             <div>
                 {panel ? <h1>Actividades</h1> : <h1>Horas</h1>}
-                {panel && <FormularioActividadesForm actionfrom={this.guardarActividad} usuario={usuario} />}
-                {panel ? <TablaActividades actividades={actividades}/> : <Tiempos actividad={6}/>}
+                {panel && <FormularioActividadesForm actionfrom={this.guardarActividad} usuario={usuario}/>}
+                {panel ? <TablaActividades actividades={actividades}/> : <Tiempos actividad={actividadActiva} regresar={this.desactivarPanel} />}
             </div>
         )
     }
