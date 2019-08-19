@@ -5,7 +5,8 @@ La ejecución se realizará en modo debug, se adjuntará todo el proyecto para r
 En la raíz del proyecto hay dos carpetas.
 -	Back: Esta el código C# para backend.
 -	Front: Esta el código React para el front.
--	DoctusPractice.bak es el archivo de backup
+-	DoctusPractice.bak es el archivo de backup de la base de datos o descargala de  https://www.dropbox.com/s/ap5lfh2co14hzj5/DoctusPractice.bak?dl=0 
+-	La base de datos está en SQLSERVER 2017.
 
 Configuración API
 
