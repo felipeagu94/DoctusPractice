@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import TablaActividades from './tablaactividades'
 import {FormularioActividadesForm} from './formularioactividad'
+import Tiempos from './paneltiempo'
 import { API_URL } from '../config'
 import axios from 'axios'
 export default class Actividades extends Component {
@@ -24,7 +25,7 @@ export default class Actividades extends Component {
         })
             .then(res => {
                 let datos = res.data.data
-                const actividades = datos.map(u => { return { key : u.idActividad ,acciones: 'aca va la url', actividad: u.descripcionActividad } })
+                const actividades = datos.map(u => { return { key : u.idActividad , acciones: 'aca va la url', actividad: u.descripcionActividad } })
                 this.setState({ actividades })
             })
     }
@@ -47,8 +48,9 @@ export default class Actividades extends Component {
         const { actividades, usuario, panel } = this.state
         return (
             <div>
-                <FormularioActividadesForm actionfrom={this.guardarActividad} usuario={usuario} />
-                {panel && <TablaActividades actividades={actividades}/>}
+                {panel ? <h1>Actividades</h1> : <h1>Horas</h1>}
+                {panel && <FormularioActividadesForm actionfrom={this.guardarActividad} usuario={usuario} />}
+                {panel ? <TablaActividades actividades={actividades}/> : <Tiempos actividad={6}/>}
             </div>
         )
     }
